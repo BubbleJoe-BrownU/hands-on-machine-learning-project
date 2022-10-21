@@ -1,0 +1,59 @@
+
+Description:
+	This dataset contains reviews of 1312 arabica coffee beans from the Coffee Quality Institute's trained reviewers. The features include:
+
+Feature of Species: \
+> Species: the species of coffee beans. In this dataset, the species of all records are arabica.  
+	type: categorical
+	values: '
+Features from sample information: \
+> Owner: lower cased name of owners of the coffee bean farms.  
+	type: categorical
+	values: 
+> Owner_1: the raw input of the name of owner.  
+> Country of Origin: the country of the farm.  
+> Farm Name: the name of the farm.  
+> Lot Number: an identification number assigned to a particular quantity or lot of material from a single manufacturer.  
+> Mill: the brand of mill used in processing of beans.   
+> ICO Number: the serial number given by International Coffee Organization. Each ICO number is a combination of figures which includes the country codes (3 figures), the code for the exporter or growers (4 figures), and the parcel number (4 figures). The ICO number is unique for each parcel of coffee beans.
+> Company: the company of the coffee beans. The number of companies is less than the number of owners because each company can have multiple contractors.
+> Altitude \
+> unit_of_measurement \
+> altitude_low_meters \
+> altitude_high_meters \
+> altitude_mean_meters \
+> Region: the region of the farm.
+> Producer: the producer of the farm
+> Number of Bags: the number of bags graded by CQI.
+> Bag Weight: the average weight of bag for each record of coffee beans.
+> In Country Partner: the partner of CQI in different countries. They manage all coffee sample evaluations and corresponding invoices, assign CQI graders to samples, and finalize each certificate/report.
+> Harvest Year: the year or the time in the year when the coffee beans were harvested.  
+> Grading Date: the date in which the coffee beans were graded.
+> Variety: the variety of the coffee plant of each record of coffee beans.
+> Processing Method: the processing method of the beans
+
+Features from cupping scores: 
+> Aroma  
+> Flavor  
+> Aftertaste  
+> Acidity  
+> Body  
+> Balance  
+> Uniformity  
+> Cup Cleanliness  
+> Sweetness   
+> Cupper Points  
+> Total Cup Points
+
+Features from Green Analysis: 
+> Moisture \
+> Category One Defects \
+> Quakers \
+> Color \
+> Category Two Defects
+
+Features from Certification Information: 
+> Expiration \
+> Certification Body \
+> Certification Address \
+> Certification Contact 
