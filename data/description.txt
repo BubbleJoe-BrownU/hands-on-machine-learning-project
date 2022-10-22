@@ -1,59 +1,414 @@
 
 Description:
-	This dataset contains reviews of 1312 arabica coffee beans from the Coffee Quality Institute's trained reviewers. The features include:
+	This dataset contains reviews of 1311 arabica coffee beans from the Coffee Quality Institute's trained reviewers. The dataset contains 1311 rows of records and 43 columns of features, among which 19 features have null values, with the highest null value rate reaching nearly 80% and mostly around 20%.
 
-Feature of Species: \
+Features include:
+
+Feature of Species:   
 > Species: the species of coffee beans. In this dataset, the species of all records are arabica.  
-	type: categorical
-	values: '
-Features from sample information: \
+	type  categorical
+	count        1311
+	unique          1
+	top       Arabica
+	freq         1311
+
+Features from sample information:   
+Features from sample information are metadata, such as country, region, about the farm where coffee beans are cultivated and harvested.
 > Owner: lower cased name of owners of the coffee bean farms.  
-	type: categorical
-	values: 
+	type 			categorical
+	count                          1304
+	unique                          305
+	top       juan luis alvarado romero
+	freq                            155
+
 > Owner_1: the raw input of the name of owner.  
+	type			categorical
+	count                          1304
+	unique                          309
+	top       Juan Luis Alvarado Romero
+	freq                            155
+
 > Country of Origin: the country of the farm.  
-> Farm Name: the name of the farm.  
+	type		 Categorical
+	count   	    	1310
+	unique        	          36
+	top       	      Mexico
+	freq         		 236
+
+> Farm Name: name of the farm.  
+	type	categorical
+	count         955
+	unique        557
+	top       various
+	freq           47
+
 > Lot Number: an identification number assigned to a particular quantity or lot of material from a single manufacturer.  
+	type	categorical
+	count     270
+	unique    221
+	top         1
+	freq       18
+
 > Mill: the brand of mill used in processing of beans.   
+	type		categorical
+	count                 1001
+	unique                 447
+	top       beneficio ixchel
+	freq                    90
+
 > ICO Number: the serial number given by International Coffee Organization. Each ICO number is a combination of figures which includes the country codes (3 figures), the code for the exporter or growers (4 figures), and the parcel number (4 figures). The ICO number is unique for each parcel of coffee beans.
+	type	categorical
+	count     1165
+	unique     841
+	top          0
+	freq        67
+
 > Company: the company of the coffee beans. The number of companies is less than the number of owners because each company can have multiple contractors.
-> Altitude \
-> unit_of_measurement \
-> altitude_low_meters \
-> altitude_high_meters \
-> altitude_mean_meters \
+	type			categorical
+	count                     1102
+	unique                     270
+	top       unex guatemala, s.a.
+	freq                        86
+
+> Altitude: altitude (range) of the farm, the unit of measurement is specified in the attribute unit of measurement.
+	type	numeric/ continuous
+	unit:		meters/feet
+	count     1088
+	unique     383
+	top       1100
+	freq        43
+
+> unit_of_measurement: the unit of measurement of altitude. Either meter or feet
+	type	categorical
+	count     1311
+	unique       2
+	top          m
+	freq      1129
+
+> altitude_low_meters: the lower bound of altitude. Though the name of this attribute ends with 'meters', its value is actually the raw digit dependent on the unit of measurement.
+	type	numeric/continuous
+	unit:		meters/feet
+	count      1084.000000
+	mean       1759.548954
+	std        8767.847252
+	min           1.000000
+	25%        1100.000000
+	50%        1310.640000
+	75%        1600.000000
+	max      190164.000000
+
+> altitude_high_meters: the upper bound of altitude. Though the name of this attribute ends with 'meters', its value is actually the raw digit dependent on the unit of measurement.
+	type	numeric/continuous
+	unit:		meters/feet
+	count      1084.000000
+	mean       1808.843803
+	std        8767.187498
+	min           1.000000
+	25%        1100.000000
+	50%        1350.000000
+	75%        1650.000000
+	max      190164.000000
+
+> altitude_mean_meters: mean value of altitude of the farm. Though the name of this attribute ends with 'meters', its value is actually the raw digit dependent on the unit of measurement.
+	type	numeric/continuous
+	unit:		meters/feet
+	count      1084.000000
+	mean       1784.196379
+	std        8767.016913
+	min           1.000000
+	25%        1100.000000
+	50%        1310.640000
+	75%        1600.000000
+	max      190164.000000
+
 > Region: the region of the farm.
-> Producer: the producer of the farm
-> Number of Bags: the number of bags graded by CQI.
+	type	categorical
+	count      1254
+	unique      343
+	top       huila
+	freq        112
+
+> Producer: the producer of the farm.
+	type	categorical
+	count         1081
+	unique         675
+	top       La Plata
+	freq            30
+
+> Number of Bags: the number of bags of samples sent to CQI for grading.
+	type	numeric/continuous
+	unit		bag(s)
+	count    1311.000000
+	mean      153.887872
+	std       129.733734
+	min         0.000000
+	25%        14.500000
+	50%       175.000000
+	75%       275.000000
+	max      1062.000000
+
 > Bag Weight: the average weight of bag for each record of coffee beans.
+	type	 numeric/continuous
+	unit		kg
+	count     1311
+	unique      56
+	top       1 kg
+	freq       327
+
 > In Country Partner: the partner of CQI in different countries. They manage all coffee sample evaluations and corresponding invoices, assign CQI graders to samples, and finalize each certificate/report.
+	Type				categorical
+	count                             1311
+	unique                              27
+	top       Specialty Coffee Association
+	freq                               295
+
 > Harvest Year: the year or the time in the year when the coffee beans were harvested.  
+	type	categorical
+	count     1264
+	unique      46
+	top       2012
+	freq       352
+
 > Grading Date: the date in which the coffee beans were graded.
+	type		categorical
+	count                1311
+	unique                558
+	top       July 11th, 2012
+	freq                   25
+
 > Variety: the variety of the coffee plant of each record of coffee beans.
-> Processing Method: the processing method of the beans
+	type	categorical
+	count        1110
+	unique         29
+	top       Caturra
+	freq          256
+
+> Processing Method: the processing method of the beans.
+	type		categorical
+	count             1159
+	unique               5
+	top       Washed / Wet
+	freq               812
 
 Features from cupping scores: 
-> Aroma  
-> Flavor  
-> Aftertaste  
-> Acidity  
-> Body  
-> Balance  
-> Uniformity  
-> Cup Cleanliness  
-> Sweetness   
-> Cupper Points  
-> Total Cup Points
+Cupping scores contain 10 individual scores, such as scores of aroma, acidity, etc., which adds up to total cup points.
+
+> Aroma: points given to the fragrancy and aroma of each cup of coffee. The total scores are 10.
+	type	numeric/continuous
+	unit		pts	
+	count    1311.000000
+	mean        7.563806
+	std         0.378666
+	min         0.000000
+	25%         7.420000
+	50%         7.580000
+	75%         7.750000
+	max         8.750000
+
+> Flavor: points given to the flavor of each cup of coffee. The total scores are 10. 
+	type	numeric/continuous	
+	unit		pts
+	count    1311.000000
+	mean        7.518070
+	std         0.399979
+	min         0.000000
+	25%         7.330000
+	50%         7.580000
+	75%         7.750000
+	max         8.830000
+
+> Aftertaste: points given to the aftertaste of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        7.397696
+	std         0.405119
+	min         0.000000
+	25%         7.250000
+	50%         7.420000
+	75%         7.580000
+	max         8.670000
+
+> Acidity: points given to the acidity of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        7.533112
+	std         0.381599
+	min         0.000000
+	25%         7.330000
+	50%         7.500000
+	75%         7.750000
+	max         8.750000
+
+> Body: points given to the overall body of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        7.517727
+	std         0.359213
+	min         0.000000
+	25%         7.330000
+	50%         7.500000
+	75%         7.670000
+	max         8.580000
+
+> Balance: points given to the balance of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        7.517506
+	std         0.406316
+	min         0.000000
+	25%         7.330000
+	50%         7.500000
+	75%         7.750000
+	max         8.750000
+
+> Uniformity: points given to the overall uniformity of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        9.833394
+	std         0.559343
+	min         0.000000
+	25%        10.000000
+	50%        10.000000
+	75%        10.000000
+	max        10.000000
+
+> Cup Cleanliness: points given to the degree of cleanliness of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.00000
+	mean        9.83312
+	std         0.77135
+	min         0.00000
+	25%        10.00000
+	50%        10.00000
+	75%        10.00000
+	max        10.00000
+
+> Sweetness: points given to the sweetness of each cup of coffee. The total scores are 10.   
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        9.903272
+	std         0.530832
+	min         0.000000
+	25%        10.000000
+	50%        10.000000
+	75%        10.000000
+	max        10.000000
+
+> Cupper Points: points given to the aesthetic performance of each cup of coffee. The total scores are 10.  
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean        7.497864
+	std         0.474610
+	min         0.000000
+	25%         7.250000
+	50%         7.500000
+	75%         7.750000
+	max        10.000000
+
+> Total Cup Points: the total scores of each cup of coffee, which is the sum of all individual scores. The total scores are 100.
+	type	numeric/continuous
+	unit		pts
+	count    1311.000000
+	mean       82.115927
+	std         3.515761
+	min         0.000000
+	25%        81.170000
+	50%        82.500000
+	75%        83.670000
+	max        90.580000
 
 Features from Green Analysis: 
-> Moisture \
-> Category One Defects \
-> Quakers \
-> Color \
-> Category Two Defects
+Meta data about coffee beans
+> Moisture: the average moisture rate of each record of coffee bean
+	type	numeric/continuous
+	unit		no unit (ratio of volume)
+	count    1311.000000
+	mean        0.088863
+	std         0.047957
+	min         0.000000
+	25%         0.090000
+	50%         0.110000
+	75%         0.120000
+	max         0.280000
+
+> Category One Defects: the number of beans with category one defects
+	type	numeric
+	unit	number of bean(s)
+	count    1311.000000
+	mean        0.426392
+	std         1.832415
+	min         0.000000
+	25%         0.000000
+	50%         0.000000
+	75%         0.000000
+	max        31.000000
+
+> Quakers: the number of immature beans
+	type	numeric
+	unit	number of bean(s)
+	count    1310.000000
+	mean        0.177099
+	std         0.840583
+	min         0.000000
+	25%         0.000000
+	50%         0.000000
+	75%         0.000000
+	max        11.000000
+
+> Color: the color of beans
+	type	categorical
+	count      1095
+	unique        4
+	top       Green
+	freq        850
+
+> Category Two Defects: the number of beans with category two defects
+	type		numeric
+	unit	number of bean(s)
+	count    1311.000000
+	mean        3.591915
+	std         5.350371
+	min         0.000000
+	25%         0.000000
+	50%         2.000000
+	75%         4.000000
+	max        55.000000
 
 Features from Certification Information: 
-> Expiration \
-> Certification Body \
-> Certification Address \
-> Certification Contact 
+Certification information about each record of coffee beans
+> Expiration: the expiring date of the certificate
+	type		numeric/timestamp
+	unit			day/month/year
+	count                1311
+	unique                557
+	top       July 11th, 2013
+	freq                   25
+
+> Certification Body: the association or institute from which certificate was given
+	type			categorical
+	count                             1311
+	unique                              26
+	top       Specialty Coffee Association
+	freq                               295
+
+> Certification Address: the address of the certificate body
+	type 					categorical
+	count                                         1311
+	unique                                          30
+	top       36d0d00a3724338ba7937c52a378d085f2172daa
+	freq                                           293
+
+> Certification Contact: the contact of the certificate body
+	type			categorical
+	count                                         1311
+	unique                                          27
+	top       0878a7d4b9d35ddbf0fe2ce69a2062cceb45a660
+	freq                                           295
