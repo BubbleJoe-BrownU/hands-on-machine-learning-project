@@ -5,6 +5,13 @@ In this project, I developed the Cyber Barista, an ensemble of supervised regres
 
 I strived to reduce the feature dimensionality to the degree that consumers can easily find the data required to run the Cyber Barista by purely looking at the package of their desired coffee beans. In this light, I intended to make the barrier of using our models as low as possible. 
 
+# Project Feature
+- NaN values
+- Ensemble learning
+- Deep Neural Networks
+- Feature-based Explanation
+- Hyperparameter Grid Search
+
 # Project Environment
 core packages used in this projects are:
 - `python=3.10`
